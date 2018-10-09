@@ -1,0 +1,84 @@
+/*Montserrat*/
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat-Bold;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+/*Oswald*/
+@font-face {
+  font-family: Oswald;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Oswald/Oswald regular.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+/*Ubuntu*/
+@font-face {
+  font-family: Ubuntu;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Ubuntu/Ubuntu-Bold.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Ubuntu-Medium;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Ubuntu-Light;
+  /* Safari, Android, iOS */
+  src: urlurl("/fonts/Ubuntu/Ubuntu-Light") format("truetype");
+  /*Formato para navegadores modernos */
+}
+/*Roboto Slab*/
+@font-face {
+  font-family: Roboto-slab;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab regular.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Roboto-slab100;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab 100.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Roboto-slab300;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab 300.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Roboto-slab700;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab 700.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+/*Instanciados */
+/*Montserrat*/
+/*Oswald*/
+/*Roboto slab*/
+/*Ubuntu*/
+* {
+  box-sizing: border-box;
+}
+
+h3 {
+  font-family: Roboto-slab, sans-serif;
+}
+
+/*# sourceMappingURL=principal.css.map */
