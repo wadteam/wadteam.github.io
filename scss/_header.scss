@@ -1,0 +1,27 @@
+#ic-user {
+    color: $primario;
+    font-size: 1.5em;
+}
+
+//.navbar-brand {}
+.brand-capital,
+.brand-normal {
+    font-family: $montse-negrita;
+    text-transform: uppercase;
+}
+
+.brand-capital {
+    color: $negro;
+}
+
+.brand-normal {
+    color: $primario;
+}
+
+.nav-item {
+    font-size: 1.1em;
+}
+
+
+
+//.icon-social {}

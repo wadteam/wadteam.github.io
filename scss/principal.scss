@@ -1,9 +1,11 @@
 @import "fuentes";
-*{
+@import "colores";
+@import "header";
+@import "footer";
+* {
     box-sizing: border-box;
-
 }
 
-h3{
+h3 {
     font-family: $robots;
 }

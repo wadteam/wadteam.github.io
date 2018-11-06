@@ -1,0 +1,14 @@
+@import "fuentes";
+@import "colores";
+@import "header";
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    float: none;
+}
