@@ -81,10 +81,8 @@
   font-size: 1.5em;
 }
 
-#ic-cerrar {
-  color: rgba(0, 0, 0, 0.8);
-  float: right;
-  font-size: 1.6em;
+.navbar {
+  box-shadow: 2px 11px 25px -8px rgba(117, 115, 117, 0.2);
 }
 
 .brand-capital,
@@ -120,6 +118,8 @@
 
 .navbar-brand {
   float: none;
+  text-decoration: none;
+  cursor: default;
 }
 
 /*# sourceMappingURL=custom-ingreso.css.map */
