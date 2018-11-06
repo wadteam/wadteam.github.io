@@ -75,8 +75,16 @@
 /*Ubuntu*/
 /*Colores secundarios*/
 #ic-user {
+  margin-top: 1em;
+  margin-bottom: 1em;
   color: #ea5252;
   font-size: 1.5em;
+}
+
+#ic-cerrar {
+  color: rgba(0, 0, 0, 0.8);
+  float: right;
+  font-size: 1.6em;
 }
 
 .brand-capital,
@@ -95,6 +103,12 @@
 
 .nav-item {
   font-size: 1.1em;
+}
+
+#ic-cerrar {
+  color: rgba(0, 0, 0, 0.8);
+  float: right;
+  font-size: 1.6em;
 }
 
 .navbar-header {

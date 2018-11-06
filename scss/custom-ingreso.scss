@@ -1,6 +1,13 @@
 @import "fuentes";
 @import "colores";
 @import "header";
+#ic-cerrar {
+
+    color: rgba($color: #000000, $alpha: 0.8);
+    float: right;
+    font-size: 1.6em;
+    
+}
 
 .navbar-header {
     float: left;
