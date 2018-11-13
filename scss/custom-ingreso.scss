@@ -1,12 +1,26 @@
 @import "fuentes";
 @import "colores";
 @import "header";
+
 #ic-cerrar {
 
     color: rgba($color: #000000, $alpha: 0.8);
     float: right;
     font-size: 1.6em;
-    
+
+}
+
+#btn-sender {
+    width: 100%;
+    height: 2.5em;
+    font-size: 1.4em;
+    font-family: $ubuntu;
+
+}
+
+#separador-sec {
+    margin-top: 35%;
+
 }
 
 .navbar-header {
@@ -18,8 +32,37 @@
 
 .navbar-brand {
     float: none;
-    
-        text-decoration: none;
-        cursor: default;
-   
+    text-decoration: none;
+    cursor: default;
+
 }
+
+.header-in {
+    h3 {
+        text-align: center;
+        color: rgba($color: #000000, $alpha: 0.6);
+        font-size: 1.8em;
+        font-family: $montse-negrita;
+    }
+
+    width: 100%;
+    height: 3em
+}
+
+
+.form-control {
+    height: 2.3em;
+    font-size: 1.3em;
+    margin-bottom: .5em;
+    font-family: $ubuntu;
+}
+
+.forgot-password {
+    text-align: center;
+}
+
+.input-group-text {
+    opacity: .6;
+}
+
+

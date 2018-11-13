@@ -109,6 +109,17 @@
   font-size: 1.6em;
 }
 
+#btn-sender {
+  width: 100%;
+  height: 2.5em;
+  font-size: 1.4em;
+  font-family: Ubuntu, sans-serif;
+}
+
+#separador-sec {
+  margin-top: 35%;
+}
+
 .navbar-header {
   float: left;
   padding: 15px;
@@ -120,6 +131,32 @@
   float: none;
   text-decoration: none;
   cursor: default;
+}
+
+.header-in {
+  width: 100%;
+  height: 3em;
+}
+.header-in h3 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.8em;
+  font-family: Montserrat-Bold, sans-serif;
+}
+
+.form-control {
+  height: 2.3em;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  font-family: Ubuntu, sans-serif;
+}
+
+.forgot-password {
+  text-align: center;
+}
+
+.input-group-text {
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=custom-ingreso.css.map */
