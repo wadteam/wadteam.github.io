@@ -997,11 +997,15 @@ pre code {
   .col-md-5 {
     flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
+    display: inline;
+  
   }
 
   .col-md-6 {
+    margin-top: 1%;
     flex: 0 0 50%;
     max-width: 50%;
+    display: inline-block;
   }
 
   .col-md-7 {
