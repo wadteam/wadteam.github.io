@@ -55,13 +55,11 @@
                                             <i class="fas fa-envelope"></i>
                                         </div>
                                     </div>
-                                    <input type="email" class="form-control" id="staticEmail" placeholder="email@ejemplo.com">
+                                    <input type="email" class="form-control" id="ctlEmail" placeholder="Email@ejemplo.com">
                                 </div>
-                                <!--
-                                
+                                <div id="feed-email" class="form-control-feedback">
 
-                                
--->
+                                </div>
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
 
@@ -76,7 +74,9 @@
                                             <i class="fas fa-lock"></i>
                                         </div>
                                     </div>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="contraseña">
+                                    <input type="password" class="form-control" id="ctlPassword" placeholder="Contraseña">
+                                </div>
+                                <div id="feed-password" class="form-control-feedback">
                                 </div>
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
@@ -86,7 +86,7 @@
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
 
                             <div class="col-sm-10 col-md-8 col-lg-8">
-                                <input type="button" class="btn btn-danger" id="btn-sender" value="Iniciar sesión">
+                                <input type="button" class="btn btn-danger btn-sender" id="btn-sender" value="Iniciar sesión">
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
                         </div>
@@ -98,7 +98,7 @@
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
                         </div>
-                       
+
                         <hr id="separador-sec">
                         <div class="form-group row sec-registro">
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
@@ -121,7 +121,8 @@
     <script src="/js/popper.min.js"></script>
     <!--==========================BS4======================================-->
     <script src="/js/bootstrap.min.js"></script>
-    <!--===================================================================-->
+    <!--====================Validaciones===================================-->
+    <script src="/js/controles/control-ingreso.js" type="module"></script>
 
 </body>
 

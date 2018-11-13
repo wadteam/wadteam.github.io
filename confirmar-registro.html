@@ -55,11 +55,28 @@
                                             <i class="fas fa-lock"></i>
                                         </div>
                                     </div>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Confirme contraseña">
+                                    <input type="password" class="form-control" id="ctlRePassword" placeholder="Confirme contraseña">
+                                </div>
+                                <div id="feed-rePassword" class="form-control-feedback">
                                 </div>
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
 
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-1 col-md-2 col-lg-2"></div>
+                            <div class="col-sm-10 col-md-8 col-lg-8">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-white">
+                                            <i class="far fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="date" class="form-control" id="ctlFecha" placeholder="Fecha de nacimiento">
+                                </div>
+                                <div id="feed-fecha" class="form-control-feedback">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
@@ -70,22 +87,14 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <input type="email" class="form-control" id="staticEmail" placeholder="Su nombre">
+                                    <select name="selGender" id="ctlGenero" class="form-control">
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-1 col-md-2 col-lg-2"></div>
-                            <div class="col-sm-10 col-md-8 col-lg-8">
-                                <div class="input-group mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text bg-white">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                    </div>
-                                    <input type="email" class="form-control" id="staticEmail" placeholder="Su@email.com">
-                                </div>
-
+<div id="feed-check" class="form-control-feedback">
+</div>
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
 
@@ -96,13 +105,13 @@
                             <div class="col-sm-10 col-md-8 col-lg-8">
                                 <div class="input-group mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <input class="form-check-input" type="checkbox" id="ctlCheck">
                                         <label class="form-check-label" for="gridCheck1">
-                                            Deseo registrarme en el sistema de YCourses y acepto<a href="#"> las
+                                            Al registrarme en YCourses, confirmo que he leído y acepto<a href="#"> las
                                                 políticas de privacidad.</a>
                                         </label>
                                     </div>
-
+                                    
                                 </div>
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
@@ -112,7 +121,7 @@
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
 
                             <div class="col-sm-10 col-md-8 col-lg-8">
-                                <input type="button" class="btn btn-danger" id="btn-sender" value="Regístrate">
+                                <input type="button" class="btn btn-danger btn-sender" id="btn-reSender" value="Regístrate">
                             </div>
                             <div class="col-sm-1 col-md-2 col-lg-2"></div>
                         </div>
@@ -140,7 +149,7 @@
     <!--==========================BS4======================================-->
     <script src="/js/bootstrap.min.js"></script>
     <!--===================================================================-->
-
+    <script src="/js/controles/control-registrond.js" type="module"></script>
 </body>
 
 </html>
