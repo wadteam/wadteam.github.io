@@ -1,6 +1,7 @@
 @import "fuentes";
 @import "colores";
 @import "header";
+
 #ic-cerrar {
     color: rgba($color: #000000, $alpha: 0.8);
     float: right;
@@ -38,6 +39,7 @@
         font-size: 1.8em;
         font-family: $montse-negrita;
     }
+
     width: 100%;
     height: 3em
 }
@@ -57,12 +59,41 @@
     opacity: .6;
 }
 
-.form-control-feedback{
+.form-control-feedback {
     color: red;
 }
-.form-control-error{
+
+.form-control-error {
     border-color: red;
 }
-.form-control-exito{
+
+.form-control-exito {
     border-color: green;
+}
+
+.confir-tick {
+    width: 150px;
+    height: 150px;
+    opacity: .7;
+    margin-top: .3em;
+}
+
+.container-tick {
+    text-align: center;
+
+}
+
+.container-button {
+    margin-top: 1.8em;
+}
+
+.container-texto {
+
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.text-gray {
+    opacity: .6;
+    font-size: .8em;
 }
