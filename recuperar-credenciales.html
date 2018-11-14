@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--==========================Haciendo uso de BS4================================-->
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <!--==========================Fontawesome========================================-->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+    <!--========================Haciendo uso del CSS propio==========================-->
+    <link rel="stylesheet" href="/css/custom-ingreso.css">
+    <title>Bienvenido a YCourses</title>
+
+</head>
+<nav id="nav-principal" class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+            <span class="brand-capital">y</span><span class="brand-normal">courses</span>
+        </a>
+        <a href="/index.html">
+            <span id="ic-cerrar" class="mr-0 mt-0 pt-0" style="">
+                <i class="fas fa-times"></i>
+                <span class="su" style="width: 30px;"></span>
+            </span>
+
+        </a>
+
+        </ul>
+
+    </div>
+
+</nav>
+<div class="container-fluid delim">
+    <div class="row form-in">
+        <div class="col-sm-1 col-md-2 col-lg-3 col-xl-4"></div>
+
+        <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4">
+            <!--TODO:Título de página-->
+            <div class="header-in pt-3 mt-5">
+                <h3>Recuperar contraseña</h3>
+            </div>
+            <div class="body-in pt-5">
+                <form>
+                    <!--TODO:Párrafo-->
+                    <div class="form-group row">
+                        <div class="col">
+                            <p class="text-gray especial-gray">Ha recibido un email con las instrucciones y el código
+                                de verificación para reestablecer su credencial.
+                                Una vez recibido debe ingresar su código a continuación:
+                            </p>
+
+                        </div>
+                    </div>
+                    <!--TODO:Control Ingresar Código-->
+                    <div class="form-group row">
+
+                        <div class="col">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text bg-white">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                </div>
+                                <input type="password" class="form-control" id="ctlPassword" placeholder="Ingrese su código">
+                            </div>
+                            <div id="feed-password" class="form-control-feedback">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--TODO:Control SENDER-->
+
+                    <div class="form-group row">
+                        <div class="col mt-3">
+                            <input type="button" class="btn btn-danger btn-sender" id="btn-recoverySender" value="Recuperar">
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-1 col-md-2 col-lg-3 col-xl-4"></div>
+    </div>
+    <div class="form-group row mt-5 pt-3">
+        <div class="col">
+            <hr>
+            <p class="footer-gray">¿Necesitas ayuda? <a href="#">Consulta en FAQ de YCourses</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<body>
+    <!--==========================JQuery===================================-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <!--==========================PopperJS=================================-->
+    <script src="/js/popper.min.js"></script>
+    <!--==========================BS4======================================-->
+    <script src="/js/bootstrap.min.js"></script>
+    <!--==================Control validación==============================-->
+    <script src="/js/controles/control-recuperar-pass.js" type="module"></script>
+</body>
+
+</html>

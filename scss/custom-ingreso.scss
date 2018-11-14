@@ -1,7 +1,6 @@
 @import "fuentes";
 @import "colores";
 @import "header";
-
 #ic-cerrar {
     color: rgba($color: #000000, $alpha: 0.8);
     float: right;
@@ -39,7 +38,6 @@
         font-size: 1.8em;
         font-family: $montse-negrita;
     }
-
     width: 100%;
     height: 3em
 }
@@ -80,7 +78,6 @@
 
 .container-tick {
     text-align: center;
-
 }
 
 .container-button {
@@ -88,12 +85,31 @@
 }
 
 .container-texto {
-
     margin-top: 2.5em;
     text-align: center;
 }
 
-.text-gray {
+/*Manipulación de textos*/
+.text-gray,
+.especial-gray,
+.footer-gray {
     opacity: .6;
+}
+
+.especial-gray,
+.footer-gray {
+    font-family: $ubuntu;
+    text-align: center;
+}
+
+.text-gray {
     font-size: .8em;
+}
+
+.especial-gray {
+    font-size: 1.2em;
+}
+
+.footer-gray {
+    font-size: .9em;
 }

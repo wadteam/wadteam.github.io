@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Montserrat*/
 @font-face {
   /*Deepest Possible Browser Support*/
@@ -195,9 +196,29 @@
   text-align: center;
 }
 
-.text-gray {
+/*Manipulación de textos*/
+.text-gray,
+.especial-gray,
+.footer-gray {
   opacity: 0.6;
+}
+
+.especial-gray,
+.footer-gray {
+  font-family: Ubuntu, sans-serif;
+  text-align: center;
+}
+
+.text-gray {
   font-size: 0.8em;
+}
+
+.especial-gray {
+  font-size: 1.2em;
+}
+
+.footer-gray {
+  font-size: 0.9em;
 }
 
 /*# sourceMappingURL=custom-ingreso.css.map */

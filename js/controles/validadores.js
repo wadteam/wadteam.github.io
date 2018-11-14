@@ -14,6 +14,8 @@ const fechaRegx = /^(?:(?:(?:0?[1-9]|1\d|2[0-8])[/](?:0?[1-9]|1[0-2])|(?:29|30)[
 const fechaRegxx = "";
 //Expresión regular que admite entre 6 y 40 carácteres
 const pasRegx = /^.{6,40}$/;
+//Expresión regular que admite entre 6 y 40 carácteres para la recuperación de constraseñas mediante código especial
+const pasRecoRegx = /^.{3,10}$/;
 //Expresión regular que admite entre 3 y 50 caracteres
 const nomRegx = /^.{3,50}$/;
 
@@ -65,6 +67,20 @@ export function ValidarPassword(controlInput, controlFeed, valor) {
     valor = $.trim(valor);
     if (!pasRegx.test(valor)) {
         controlFeed.innerHTML = "Debe ingresar una contraseña válida, entre 6 y 50 caracteres.";
+        AddControlError(controlInput);
+        return false;
+    } else {
+        controlFeed.innerHTML = "";
+        AddControlExito(controlInput);
+        return true;
+    }
+
+}
+
+export function ValidarPasswordRecovery(controlInput, controlFeed, valor) {
+    valor = $.trim(valor);
+    if (!pasRegx.test(valor)) {
+        controlFeed.innerHTML = "Debe ingresar un código de recuperación válido.";
         AddControlError(controlInput);
         return false;
     } else {
