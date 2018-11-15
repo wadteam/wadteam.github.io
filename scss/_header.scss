@@ -3,6 +3,7 @@
     margin-bottom: 1em;
     color: $primario;
     font-size: 1.5em;
+    font-weight: 800;
 }
 /*
 #bt-ingreso{}
@@ -29,6 +30,11 @@
 
 .nav-item {
     font-size: 1.1em;
+    &:hover{
+        text-decoration: underline;
+        
+    }
 }
+
 
 //.icon-social {}

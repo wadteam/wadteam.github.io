@@ -80,6 +80,7 @@
   margin-bottom: 1em;
   color: #ea5252;
   font-size: 1.5em;
+  font-weight: 800;
 }
 
 /*
@@ -106,6 +107,9 @@
 
 .nav-item {
   font-size: 1.1em;
+}
+.nav-item:hover {
+  text-decoration: underline;
 }
 
 #ic-cerrar {

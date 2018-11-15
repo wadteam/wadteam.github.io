@@ -1,0 +1,237 @@
+/*Colores secundarios*/
+/*Montserrat*/
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat-Bold;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+/*Oswald*/
+@font-face {
+  font-family: Oswald;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Oswald/Oswald regular.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+/*Ubuntu*/
+@font-face {
+  font-family: Ubuntu;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Ubuntu/Ubuntu-Bold.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Ubuntu-Medium;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Ubuntu-Light;
+  /* Safari, Android, iOS */
+  src: urlurl("/fonts/Ubuntu/Ubuntu-Light") format("truetype");
+  /*Formato para navegadores modernos */
+}
+/*Roboto Slab*/
+@font-face {
+  font-family: Roboto-slab;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab regular.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Roboto-slab100;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab 100.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Roboto-slab300;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab 300.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+@font-face {
+  font-family: Roboto-slab700;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Roboto/Roboto Slab 700.ttf") format("truetype");
+  /*Formato para navegadores modernos */
+}
+/*Instanciados */
+/*Montserrat*/
+/*Oswald*/
+/*Roboto slab*/
+/*Ubuntu*/
+/*
+.icon-perfil,
+.profile-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 90px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 2em;
+}
+
+.icon-perfil {
+
+    background-image: url();
+
+}
+
+.profile-link {
+    border: 1px solid rgba($color: #000000, $alpha: 0.3);
+}
+*/
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+body {
+  overflow-x: hidden;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #7c7c7c;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #ea5252;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #fff;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+
+  #sidebar-wrapper {
+    width: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+.text-primario {
+  color: #ea5252;
+}
+
+text-gray .text-primario-darken {
+  color: #992337;
+}
+
+.color-primario {
+  background-color: #ea5252;
+  color: white;
+  font-family: Ubuntu, sans-serif;
+}
+
+/*# sourceMappingURL=custom_admin.css.map */
