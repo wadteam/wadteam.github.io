@@ -102,11 +102,22 @@ export function ValidarCheckRegistro(controlInput, controlFeed) {
     }
 }
 
+export function CompararPasswords(controlInput, controlFeed, primerValor, segundoValor) {
+    if (!primerValor === segundoValor) {
+        controlFeed.innerHTML = "Las contraseñas no coinciden.";
+        return false;
+    } else {
+        controlFeed.innerHTML = "";
+        return true;
+    }
+}
+
 //funciones internas
 function AddControlError(controlInput) {
     controlInput.classList.remove("form-control-exito");
     controlInput.classList.add("form-control-error");
 }
+
 function AddControlExito(controlInput) {
     controlInput.classList.remove("form-control-error");
     controlInput.classList.add("form-control-exito");

@@ -21,8 +21,11 @@ sender.onclick = function (e) {
     validador.ValidarPassword(ctlNewPass, feedNewPass, nuevaPassword);
     validador.ValidarPassword(ctlNewPassConfirm, feedNewPassConfirm, nuevaPasswordConfirm);
 
-    if (validador.ValidarPassword(ctlOldPass, feedPass, password) && validador.ValidarPassword(ctlNewPass, feedNewPass, nuevaPassword) && validador.ValidarPassword(ctlNewPassConfirm, feedNewPassConfirm, nuevaPasswordConfirm)){
+    if (validador.ValidarPassword(ctlOldPass, feedPass, password) && validador.ValidarPassword(ctlNewPass, feedNewPass, nuevaPassword) && validador.ValidarPassword(ctlNewPassConfirm, feedNewPassConfirm, nuevaPasswordConfirm)) {
 
-        validador.CompararPasswords();
+        validador.CompararPasswords(ctlNewPassConfirm, feedNewPassConfirm, nuevaPassword, nuevaPasswordConfirm);
+        if (validador.CompararPasswords(ctlNewPassConfirm, feedNewPassConfirm, nuevaPassword, nuevaPasswordConfirm)) {
+                console.log("validación efectuada con éxito");
+        }
     }
 };
