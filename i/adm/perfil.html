@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
     <!--==========================Fontawesome========================================-->
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <!--==========================Toastr.JS==========================================-->
+    <link rel="stylesheet" href="/css/vendor/toastr.min.css">
     <!--========================Haciendo uso del CSS propio==========================-->
     <link rel="stylesheet" href="/css/principal.css">
     <!--========================Haciendo uso del CSS propio==========================-->
@@ -55,13 +57,13 @@
     <!--Inicio contenido perfil-->
     <div class="container bootstrap snippet">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-4"></div>
 
-            <div class="col-sm-8">
+            <div class="col-sm-4">
                 <h1 class="text-secondary text-center pt-3">Administrador</h1>
                 <br />
             </div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-4"></div>
         </div>
         <div class="row">
             <div class="col-sm-3">
@@ -111,107 +113,124 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="home">
                         <hr class="pt-5">
-                        <form class="form shadow col-md-10 p-3 mb-5 bg-white rounded" action="##" method="post" id="registrationForm">
-                            <div class="form-group ">
-                                <div class="col-xs-6">
-                                    <label for="first_name">
-                                        <h4 class="text-secondary">Nombre</h4>
-                                    </label>
-                                    <input id="ctlNombre" type="text" class="form-control" name="first_name"
-                                        placeholder="Jeff Bezos" title="enter your first name if any.">
-                                </div>
-                                <div id="feed-nombre" class="form-control-feedback">
+
+                        <div class="col-sm-10">
+
+                            <form class="form shadow p-3 mb-5 bg-white rounded" action="##" method="post" id="FormPerfil">
+                                <div class="form-group ">
+                                    <div class="col-xs-6">
+                                        <label for="first_name">
+                                            <h4 class="text-secondary">Nombre</h4>
+                                        </label>
+                                        <input id="ctlNombre" type="text" class="form-control" name="first_name"
+                                            placeholder="Jeff Bezos" title="enter your first name if any.">
+                                    </div>
+                                    <div id="feed-nombre" class="form-control-feedback">
+
+                                    </div>
 
                                 </div>
+                                <div class="form-group">
 
-                            </div>
-                            <div class="form-group">
-
-                                <div class="col-xs-6">
-                                    <label for="email">
-                                        <h4 class="text-secondary">Email</h4>
-                                    </label>
-                                    <input id="ctlEmail" type="email" class="form-control" name="email" placeholder="Jeff@Amazon.com"
-                                        title="enter your email.">
-                                    <div id="feed-email" class="form-control-feedback">
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 class="text-secondary">Email</h4>
+                                        </label>
+                                        <input id="ctlEmail" type="email" class="form-control" name="email" placeholder="Jeff@Amazon.com"
+                                            title="enter your email.">
+                                        <div id="feed-email" class="form-control-feedback">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
+                                <div class="form-group">
 
-                                <div class="col-xs-6">
-                                    <label for="phone">
-                                        <h4 class="text-secondary">Contacto #1</h4>
-                                    </label>
-                                    <input id="ctlNumeroSt" type="text" class="form-control" name="phone" placeholder="Ingrese su número de contacto"
-                                        title="enter your phone number if any.">
-                                    <div id="feed-contactoSt" class="form-control-feedback">
+                                    <div class="col-xs-6">
+                                        <label for="phone">
+                                            <h4 class="text-secondary">Contacto #1</h4>
+                                        </label>
+                                        <input id="ctlContactoSt" type="text" class="form-control" name="phone"
+                                            placeholder="Ingrese su número de contacto" title="enter your phone number if any.">
+                                        <div id="feed-contactoSt" class="form-control-feedback">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <label for="mobile">
-                                        <h4 class="text-secondary">Contacto #2</h4>
-                                    </label>
-                                    <input id="ctlNumeroNd" type="text" class="form-control" name="mobile" placeholder="Ingrese su número de contacto"
-                                        title="enter your mobile number if any.">
-                                    <div id="feed-contactoNd" class="form-control-feedback">
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="mobile">
+                                            <h4 class="text-secondary">Contacto #2</h4>
+                                        </label>
+                                        <input id="ctlContactoNd" type="text" class="form-control" name="mobile"
+                                            placeholder="Ingrese su número de contacto" title="enter your mobile number if any.">
+                                        <div id="feed-contactoNd" class="form-control-feedback">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-6">
-                                    <label for="mobile">
-                                        <h4 class="text-secondary">Contacto #2</h4>
-                                    </label>
-                                    <select id="ctlGender" class="form-control" name="ctlGender">
-                                        <option value="">Masculino</option>
-                                        <option value="">Femenino</option>
-                                        <option value="">Otro</option>
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="mobile">
+                                            <h4 class="text-secondary">Fecha Nacimiento</h4>
+                                        </label>
+                                        <input id="ctlNacimiento" type="date" class="form-control" name="fecha nacimiento" placeholder="Ingrese su fecha de nacimiento"
+                                            title="enter your mobile number if any.">
+                                        <div id="feed-nacimiento" class="form-control-feedback">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="mobile">
+                                            <h4 class="text-secondary">Género</h4>
+                                        </label>
+                                        <select id="ctlGenero" class="form-control" name="ctlGender">
+                                            <option value="">Masculino</option>
+                                            <option value="">Femenino</option>
+                                            <option value="">Otro</option>
 
-                                    </select>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
+                                <div class="form-group">
 
-                                <div class="col-xs-6">
-                                    <label for="email">
-                                        <h4 class="text-secondary">Empresa</h4>
-                                    </label>
-                                    <input type="text" class="form-control disabled" id="ctlEmpresa" placeholder="Amazon Web Services, Inc."
-                                        title="ingrese una empresa" disabled>
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 class="text-secondary">Empresa</h4>
+                                        </label>
+                                        <input type="text" class="form-control disabled" id="ctlEmpresa" placeholder="Amazon Web Services, Inc."
+                                            title="ingrese una empresa" disabled>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-6 pt-5">
-                                    <button class="btn color-primario">
-                                        Ver servicios asociados
-                                    </button>
+                                <div class="form-group">
+                                    <div class="col-xs-6 pt-5">
+                                        <button id="servicio-sender"class="btn color-primario">
+                                            Ver servicios
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-xs-6 pt-2">
-                                    <button class="btn btn-info">
-                                        Cambiar contraseña
-                                    </button>
+                                <div class="form-group">
+                                    <div class="col-xs-12 pt-2">
+                                        <button id="btn-pwSender"class="btn btn-info">
+                                            Cambiar contraseña
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+                        </div>
                     </div>
 
-                    
-                    
+
+
                     <div class="form-group">
-                        <div class="col-xs-12">
+
+                        <div class="col-xs-10">
                             <br>
-                            <button id="btn-profileSender" class="btn btn-lg btn-success" type="submit"><i class="fas fa-save"></i>
+                            <button id="btn-profileSender" class="btn btn-lg color-primario" type="submit"><i class="fas fa-save"></i>
                                 Guardar</button>
                             <button class="btn btn-lg" type="reset"><i class="fas fa-broom"></i>
                                 Limpiar</button>
                         </div>
+
                     </div>
-                    </form>
 
                     <hr>
 
@@ -229,11 +248,18 @@
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vendor/toastr.min.js"></script>
     <script src="/js/controles/control-perfil-adm.js" type="module"></script>
     <!--===========================================================================-->
     <script>
+        $("#servicio-sender").click(function(e){
+            e.preventDefault();
+            
+        });
+
         $(document).ready(function () {
 
+            
 
             var readURL = function (input) {
                 if (input.files && input.files[0]) {

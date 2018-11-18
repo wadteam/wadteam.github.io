@@ -3,6 +3,9 @@
 // - Fecha
 // - Nombre
 // - Password
+// - Password Recovery
+// - Comparar Passwords
+// - Número de Contacto
 // - Check Registro
 /*************Expresiones regulares ***************/
 //Expresión regular para direcciones de correo electrónico, sin estándares de la W3C
@@ -91,6 +94,16 @@ export function ValidarPasswordRecovery(controlInput, controlFeed, valor) {
 
 }
 
+export function CompararPasswords(controlInput, controlFeed, primerValor, segundoValor) {
+    if (!primerValor === segundoValor) {
+        controlFeed.innerHTML = "Las contraseñas no coinciden.";
+        return false;
+    } else {
+        controlFeed.innerHTML = "";
+        return true;
+    }
+}
+
 export function ValidarCheckRegistro(controlInput, controlFeed) {
 
     if (!controlInput.checked) {
@@ -102,15 +115,28 @@ export function ValidarCheckRegistro(controlInput, controlFeed) {
     }
 }
 
-export function CompararPasswords(controlInput, controlFeed, primerValor, segundoValor) {
-    if (!primerValor === segundoValor) {
-        controlFeed.innerHTML = "Las contraseñas no coinciden.";
-        return false;
-    } else {
+export function ValidarNumeroContacto(controlInput, controlFeed, valor) {
+    valor = $.trim(valor);
+    if (valor.length >= 1) {
+
+        if (valor.length < 5 || valor.length > 14) {
+            controlFeed.innerHTML = "Debe ingresar un número entre 6 y 15 dígitos.";
+            AddControlError(controlInput);
+            return false;
+        } else {
+            controlFeed.innerHTML = "";
+            AddControlExito(controlInput);
+            return true;
+        }
+
+    } else if (valor.length === 0) {
         controlFeed.innerHTML = "";
+        AddControlExito(controlInput);
         return true;
     }
 }
+
+
 
 //funciones internas
 function AddControlError(controlInput) {

@@ -224,7 +224,7 @@ body {
   color: #ea5252;
 }
 
-text-gray .text-primario-darken {
+.text-gray .text-primario-darken {
   color: #992337;
 }
 
@@ -232,6 +232,18 @@ text-gray .text-primario-darken {
   background-color: #ea5252;
   color: white;
   font-family: Ubuntu, sans-serif;
+}
+
+.form-control-error {
+  border-color: red;
+}
+
+.form-control-exito {
+  border-color: green;
+}
+
+.form-control-feedback {
+  color: red;
 }
 
 /*# sourceMappingURL=custom_admin.css.map */

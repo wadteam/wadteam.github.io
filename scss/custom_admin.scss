@@ -2,17 +2,28 @@
 @import "fuentes";
 @import "headeradm";
 @import "sideadm";
-
-
-.text-primario{
+.text-primario {
     color: $primario;
 }
-text-gray
-.text-primario-darken{
+
+.text-gray .text-primario-darken {
     color: $primario-darken;
 }
-.color-primario{
+
+.color-primario {
     background-color: $primario;
-    color:white;
+    color: white;
     font-family: $ubuntu;
+}
+
+.form-control-error {
+    border-color: red;
+}
+
+.form-control-exito {
+    border-color: green;
+}
+
+.form-control-feedback {
+    color: red;
 }
