@@ -4,7 +4,7 @@ include "conexion.php";
 $email = $_POST['email'];
 $password = $_POST['password'];
 //SENTENCIA SQL
-$sql = 'SELECT * FROM admin WHERE email="'.$email.'" AND password ="'.$password.'";';
+$sql = 'SELECT * FROM admin WHERE email="'.$email.'" AND password ="'.$password.'" AND estado = "Admin";';
 
 $content = mysqli_query(Conecta(),$sql);
 $totalFilas = mysqli_num_rows($content);
@@ -18,12 +18,12 @@ if($totalFilas!=0){
     $_SESSION['password'] = $datos['password'];
     $_SESSION['nombre'] = $datos['nombre'];
     $_SESSION['apellidos'] = $datos['apellidos'];
+    /* */
     $_SESSION['estado'] = $datos['estado'];
 
     header("Location: redirect.php");
 
 }else{
-
     header("Location: ../error-ingreso.html");
 }
 

@@ -95,11 +95,13 @@ export function ValidarPasswordRecovery(controlInput, controlFeed, valor) {
 }
 
 export function CompararPasswords(controlInput, controlFeed, primerValor, segundoValor) {
-    if (!primerValor === segundoValor) {
+    if (primerValor !== segundoValor) {
         controlFeed.innerHTML = "Las contraseñas no coinciden.";
+        AddControlError(controlInput);
         return false;
     } else {
         controlFeed.innerHTML = "";
+        AddControlExito(controlInput);
         return true;
     }
 }

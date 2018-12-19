@@ -10,56 +10,19 @@ if(isset($_SESSION['email']) && $_SESSION['estado']=="Admin"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--==========================Haciendo uso de BS4================================-->
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
-    <!--==========================Fontawesome========================================-->
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
-    <!--========================Haciendo uso del CSS propio==========================-->
-    <link rel="stylesheet" href="/css/principal.css">
-    <!--========================Haciendo uso del CSS propio==========================-->
-    <link rel="stylesheet" href="/css/custom_admin.css">
+    <?php 
+    //Incluyendo imports de CSS
+    include '/templates/import-css.php'; 
+    ?>
     <title>Home de administrador - YCourses</title>
 </head>
 
 <body>
     <!--IMPORTANDO NAVBAR-->
-    <?php include "navbar.php"; ?>
-    <!---->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                    <i class="fas fa-tachometer-alt"></i> Tablero Admin
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-location-arrow"></i>  Dashboard</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-user-graduate"></i>  Clientes</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-user-tie"></i>  Empresas</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-chalkboard-teacher"></i>  Funcionarios</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-chalkboard-teacher"></i>  Servicios</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-file-alt"></i>  Informes</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-cog"></i>  Otros</a>
-                </li>
-                
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+    <?php include "/templates/navbar.php" ?>
+    
+    <!--IMPORTANDO SIDEBAR-WRAPPER -->
+    <?php include "/templates/sidebar.php" ?>
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -84,11 +47,10 @@ if(isset($_SESSION['email']) && $_SESSION['estado']=="Admin"){
         <!-- /#page-content-wrapper -->
 
     </div>
-    <!--===========================================================================-->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <!--===========================================================================-->
+    <?php
+    //Incliendo Imports JS  
+    include '/templates/import-js.php'; 
+    ?>
     <script>
 
         $("#menu-toggle").click(function (e) {

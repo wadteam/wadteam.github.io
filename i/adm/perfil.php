@@ -5,6 +5,8 @@ if($_SESSION['estado']=="Admin"){
     $email = $_SESSION['email'];
     $nombre = $_SESSION['nombre'];
     $apellidos = $_SESSION['apellidos'];
+    $_SESSION['action'] =  "actualizaDatos";
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,21 +15,14 @@ if($_SESSION['estado']=="Admin"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--==========================Haciendo uso de BS4================================-->
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
-    <!--==========================Fontawesome========================================-->
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
-    <!--==========================Toastr.JS==========================================-->
-    <link rel="stylesheet" href="/css/vendor/toastr.min.css">
-    <!--========================Haciendo uso del CSS propio==========================-->
-    <link rel="stylesheet" href="/css/principal.css">
-    <!--========================Haciendo uso del CSS propio==========================-->
-    <link rel="stylesheet" href="/css/custom_admin.css">
+    <?php 
+    include '/templates/import-css.php'; 
+    ?>
     <title>Perfil de administrador - YCourses</title>
 </head>
 
 <body>
-    <?php include 'navbar.php'; ?>
+    <?php include '/templates/navbar.php'; ?>
 
     <!--Inicio contenido perfil-->
     <div class="container bootstrap snippet">
@@ -169,41 +164,29 @@ if($_SESSION['estado']=="Admin"){
         <!--/col-9-->
     </div>
     <!--/row-->
+    <?php 
+    include '/templates/import-js.php'; 
+    ?>
     <!--===========================================================================-->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/vendor/toastr.min.js"></script>
     <script src="/i/adm/control-perfil-adm.js" type="module"></script>
     <!--===========================================================================-->
-    <script>
-        $("#servicio-sender").click(function(e){
-            e.preventDefault();
-            
-        });
-
-        $(document).ready(function () {
-
-            
-
-            var readURL = function (input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('.avatar').attr('src', e.target.result);
-                    }
-
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-
-
-            $(".file-upload").on('change', function () {
-                readURL(this);
-            });
-        });
-    </script>
+    <?php
+        if (isset($_GET['error'])) {
+    ?>
+        <script>
+            toastr.error('Ha ocurrido un problema de comunicación. Intentelo más tarde.');
+            console.log("Error al realizar la petición");
+        </script>      
+    <?php
+        }else if(isset($_GET['success'])){
+    ?>
+        <script>
+            toastr.success('Sus datos se han actualizado correctamente!.');
+            console.log("Actualización efectuada exitosamente");
+        </script>
+    <?php        
+        }
+    ?>
 </body>
 
 </html>

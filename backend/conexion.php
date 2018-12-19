@@ -1,20 +1,15 @@
 <?php
 /************************************************************ */
-/*                    VARIABLES DE CONEXION                  */
-/********************************************************** */
-/*
-$server ="localhost";
-$usuario ="root";
-$password ="";
-$basedatos = "bd_ycourses";
-*/
-/************************************************************ */
-/*                    CONEXION A BD                          */
+/*                    CONSTANTES DE CONEXION                 */
 /********************************************************** */
     define("SERV_NAME","localhost");
 	define("SERV_USER","root");
 	define("SERV_PWD","");
 	define("BD_NAME","bd_ycourses");
+/************************************************************ */
+/*                    CONEXION A BD                          */
+/********************************************************** */
+    
 	
 	//Funcion de conexion
 	function Conecta(){
