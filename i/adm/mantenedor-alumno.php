@@ -27,9 +27,25 @@ if(isset($_SESSION['email']) && $_SESSION['estado']=="Admin"){
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"><i id="icon-btn" class="fas fa-chevron-circle-right"></i></a>
-                <h1>Mantenedor para Alumnos</h1>
-                
+            <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"><i id="icon-btn" class="fas fa-chevron-circle-right"></i></a>
+
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 text-center">
+                        <h1 class="mb-3 ">Sección alumnos</h1>
+                        <!--Para buscar alumno-->
+                        <form id="alumno-searcher">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Ingrese nombre o rut de alumno" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <hr class="mt-5 mb-5">
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
