@@ -9,6 +9,7 @@ include "../conexion.php";
     $rut = $_SESSION['rut'];
     $nombre = $_SESSION['nombre'];
     $apellidos = $_SESSION['apellidos'];
+    $genero = $_SESSION['genero'];
     $email = $_SESSION['email'];
     $idCiudad = $_SESSION['id_ciudad'];
     $nomCiudad = $_SESSION['nombre_ciudad'];
