@@ -20,7 +20,7 @@
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <a href="/index.html">
+                <a href="/backend/cerrar-sesion-php">
                     <i id="ic-user" class="fas fa-sign-out-alt"></i>
                 </a>
                 <span class="icon-social" style="width:30px;">

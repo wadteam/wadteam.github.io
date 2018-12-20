@@ -1,261 +1,268 @@
 <?php
 session_start();
-if($_SESSION['estado']=="alumno"){ 
+if($_SESSION['estado']=="Alumno"){ 
     $id = $_SESSION['id'];
-    $email = $_SESSION['email'];
+    $rut = $_SESSION['rut'];
     $nombre = $_SESSION['nombre'];
     $apellidos = $_SESSION['apellidos'];
-    $_SESSION['action'] =  "actualizaDatos";
-    
+    $email = $_SESSION['email'];
+    $idCiudad = $_SESSION['id_ciudad'];
+    $nomCiudad = $_SESSION['nombre_ciudad'];
+    $fechaNac = $_SESSION['fecha_nacimiento'];
+    $numContacto = $_SESSION['n_contacto'];
+    $numContactoExtra = $_SESSION['n_contactoe'];
+    $descripcion = $_SESSION['descripcion'];
+    $avatar = $_SESSION['imagen_perfil'];
+    $listaCiudades = $_SESSION['listaCiudades'];
+    $_SESSION['action'] =  "actualizaDatos";  
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!--
-      ==========================Haciendo uso de BS4================================
-    -->
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css" />
-    <!--
-      ==========================Fontawesome========================================
-    -->
-    <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
-    <!--
-      ==========================Toastr.JS==========================================
-    -->
-    <link rel="stylesheet" href="/css/vendor/toastr.min.css" />
-    <!--
-      ========================Haciendo uso del CSS propio==========================
-    -->
-    <link rel="stylesheet" href="/css/principal.css" />
-    <!--
-      ========================Haciendo uso del CSS propio==========================
-    -->
-    <link rel="stylesheet" href="/css/custom_admin.css" />
-    <title>Perfil del usuario - YCourses</title>
-  </head>
 
-  <body>
-    <nav
-      id="nav-principal"
-      class="navbar navbar-expand-lg navbar-light bg-white"
-    >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"> </span>
-      </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <?php 
+    include '/templates/import-css.html'; 
+    ?>
+    <title>Perfil de administrador - YCourses</title>
+</head>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a id="ic-collapse" class="navbar-brand" href="#">
-          <span class="brand-capital">y</span
-          ><span class="brand-normal">courses</span>
-        </a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/i/usr/perfil.html"
-              >Perfil<span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/i/usr/home.html">Servicios</a>
-          </li>
+<body>
+    <?php include '/templates/navbar.php'; ?>
 
-         
-          <li class="nav-item">
-            <a class="nav-link" href="/i/usr/Certificados.html"
-              >Mis Certificados</a
-            >
-          </li>
+    <!--Inicio contenido perfil-->
+    <div class="container bootstrap snippet">
+        <div class="row">
+            <div class="col-sm-4"></div>
 
-          <li class="nav-item">
-            <a class="nav-link" href="/i/usr/horario.html">Mi Horario</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <a href="/index.html">
-            <i id="ic-user" class="fas fa-sign-out-alt"></i>
-          </a>
-          <span class="icon-social" style="width:30px;"> </span>
-          <!--
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          -->
-        </form>
-      </div>
-    </nav>
-    <!-- -TERMINO DE NAV -->
-    <!-- COMIENZA CODIGO DEL CUERPO DEL PERFIL CLIENTE -->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-
-   <!----> <div class="text-center">
-    <h1>Perfil Personal</h1>              
-</div>
-<div class="text-center">
-      <img src="/img/mona.jpg" alt="150" width="350" class="rounded-circle">
-     
-</div>
-
-<div class="text-center">
-    <input type="file" name="foto" id="">              
-</div>
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------------------------->
-
-
-<div class="container shadow-lg p-3 xs-5 bg-white rounded">
-
-  <div class="col-xs-1"></div>
-<div class="col-xs-10 col-md-10 col-sm-12">
-  
-
-      
-    <div class="form-group col-xs-4">
-      <label for="formGroupExampleInput">Nombre Completo</label>
-      <input
-        type="text"
-        class="form-control"
-        id="ctlnombre"
-        value=""
-        style="width: 50rem;"
-        readonly="readonly";
-      />
-    </div>
-    <div class="form-group col-xs-4 ">
-      <label for="formGroupExampleInput2">Correo personal</label>
-      <input
-        type="text"
-        class="form-control"
-        id="ctlemail"
-        value=""
-        style="width: 50rem;"
-        
-      />
-    </div>
-    <div class="form-row">
-          <div class="col-xs-4">
-            <label for="validationTooltip01">Edad</label>
-            <input type="text" class="form-control" id="ctledad" value="45" readonly="readonly";>
-            <div class="valid-tooltip">
-              Looks good!
+            <div class="col-sm-4">
+                <h1 class="text-secondary text-center pt-3">Perfil Personal</h1> 
+                <br />
             </div>
-          </div>
-
-          <div class="col-xs-4 ">
-                  <div>
-                      <label>Genero
-                      </label>
-                      <select id="ctlGenero" class="form-control" name="ctlGender">
-                          <option value="" selected></option>
-                          <option value="">Femenino</option>
-                          <option value="">Otro</option>
-
-                      </select>
-                  </div>
-              </div>
-
-         
-      
-          <div class="col-xs-4">
-            <label for="validationTooltipUsername">Usuario</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="usuario">@</span>
-              </div>
-              <input type="text" class="form-control" id="ctlusuario" value="Laruda" aria-describedby="validationTooltipUsernamePrepend" readonly="readonly";>
-              <div class="invalid-tooltip">
-                
-              </div>
-            </div>
-          </div>
+            <div class="col-sm-4"></div>
         </div>
-        <div class="form-row">
-          <div class="col-xs-4">
-            <label for="validationTooltip03">Cantidad de cursos</label>
-            <input type="text" class="form-control" id="validationTooltip03" value="3" readonly="readonly";>
-            <div class="invalid-tooltip">
-           
-            </div>
-          </div>
-         <!--------------------------------------------->
-    
-          <div class="col-xs-4">
-                  <div>
-                      <label>Pais
-                      </label>
-                      <select id="Pais" class="form-control" name="Pais">
-                          <option value="1" selected>Chile</option>
+        <div class="row">
+            <div class="col-sm-3">
+                <!--left col-->
 
-                      </select>
-                  </div>
-              </div>
-          <!--------------------------->
-         
-          <div class="col-xs-4 ">
-                  <div>
-                      <label>Ciudad
-                      </label>
-                      <select id="Ciudad" class="form-control" name="Ciudad">
-                          <option value="1" selected>Los Flaquitos</option>
-                          <option value="2">Los Gorditos</option>
-                          <option value="3">Los Palillos</option>
 
-                      </select>
-                  </div>
-              </div>
-
-              <div class="col-xs-4">
-                <div>
-                    <label>Estado Civil
-                    </label>
-                    <select id="Ciudad" class="form-control" name="Ciudad">
-                        <option value="1" selected>Soltero</option>
-                        <option value="2">Casado</option>
-                        <option value="3">ay nose -u-</option>
-
-                    </select>
+                <div class="text-center">
+                    <img src="/img/mrjeff.jpg" class="avatar img-circle img-thumbnail" alt="avatar" style="border-radius: 50%;">
+                    <h6>Subir una imagen</h6>
+                    <!--
+                    <input type="file" class="text-center center-block file-upload">
+                    -->
                 </div>
+                </hr><br>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Sitio web <i class="fa fa-link fa-1x"></i></div>
+                    <div class="panel-body"><a href="http://wadteam.github.io">wadteam.git</a></div>
+                </div>
+
+
+                <ul class="list-group pt-5">
+                    <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i></li>
+                    <li class="list-group-item text-right text-primario"><span class="pull-left"><strong>Compartido</strong></span>125</li>
+                    <li class="list-group-item text-right text-primario"><span class="pull-left"><strong>Likes</strong></span>13</li>
+                    <li class="list-group-item text-right text-primario"><span class="pull-left"><strong>Preguntas</strong></span>
+                        37</li>
+                    <li class="list-group-item text-right text-primario"><span class="pull-left"><strong>Seguidores</strong></span>
+                        78</li>
+                </ul>
+
+                <div class="panel panel-default pt-5">
+                    <div class="panel-heading">Redes Sociales</div>
+                    <div class="panel-body mt-2">
+                        <i class="fab fa-facebook-f fa-lg ml-2"></i> <i class="fab fa-github fa-lg ml-2"></i> <i class="fab fa-twitter fa-lg ml-2"></i>
+                        <i class="fab fa-pinterest fa-lg ml-2"></i> <i class="fab fa-google-plus fa-lg ml-2"></i>
+                    </div>
+                </div>
+
             </div>
-          <!----------------------->
+            <!--/col-3-->
+            <div class="col-sm-9">
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        <hr class="pt-5">
+
+                        <div class="col-sm-10">
+
+                            <form id="form-perfil-admin" class="form shadow p-3 mb-5 bg-white rounded">
+                            <div class="form-group disabled">
+                                    <div class="col-xs-6">
+                                        <label for="first_name">
+                                            <h4 class="text-secondary">RUT</h4>
+                                        </label>
+                                        <input disabled id="ctlRut" type="text" class="form-control " name="rut"
+                                            placeholder="Jeff" title="Ingresa aquí tu nombre" value="<?php echo $rut ?>">
+                                    </div>
+                                    <div id="feed-nombre" class="form-control-feedback">
+
+                                    </div>
+
+                            </div>    
+                            <div class="form-group ">
+                                    <div class="col-xs-6">
+                                        <label for="first_name">
+                                            <h4 class="text-secondary">Nombre</h4>
+                                        </label>
+                                        <input id="ctlNombre" type="text" class="form-control" name="nombre"
+                                            placeholder="Jeff" title="Ingresa aquí tu nombre" value="<?php echo $nombre ?>">
+                                    </div>
+                                    <div id="feed-nombre" class="form-control-feedback">
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group ">
+                                    <div class="col-xs-6">
+                                        <label for="first_name">
+                                            <h4 class="text-secondary">Apellidos</h4>
+                                        </label>
+                                        <input id="ctlApellidos" type="text" class="form-control" name="apellidos"
+                                            placeholder="Bezos" title="Ingresa aquí tus apellidos" value="<?php echo $apellidos ?>">
+                                    </div>
+                                    <div id="feed-apellidos" class="form-control-feedback">
+
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 class="text-secondary">Email</h4>
+                                        </label>
+                                        <input id="ctlEmail" type="email" class="form-control" name="email" placeholder="Jeff@Amazon.com"
+                                            title="enter your email." value="<?php echo $email ?>"/>
+                                        <div id="feed-email" class="form-control-feedback">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 class="text-secondary">Género</h4>
+                                        </label>
+                                        <select id="ctlGenero" name="genero" class="form-control">
+                                            <option value="Masculino"> Masculino </option>
+                                            <option value="Femenino"> Femenino </option>
+                                            <option value="Otro"> Otro </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 class="text-secondary">Fecha Nacimiento</h4>
+                                        </label>
+                                        <input id="ctlFechnac" type="date" class="form-control" name="fechaNac" placeholder="Jeff@Amazon.com"
+                                            title="enter your email." value="<?php echo $fechaNac ?>"/>
+                                        <div id="feed-email" class="form-control-feedback">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 class="text-secondary">Ciudad</h4>
+                                        </label>
+                                    
+                                        <select id="ctlCiudad" name="ciudad" class="form-control">
+                                        <?php
+                                            //while($ciudades = mysqli_fetch_array($execute)){
+                                            //    echo '<option value=""></option>';
+                                            //}
+                                            //mysqli_close(Conecta());
+                                        ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="ctlNumContacto">
+                                            <h4 class="text-secondary">Número de contacto</h4>
+                                        </label>
+                                        <input id="ctlNumContacto" type="text" class="form-control" name="numContacto" placeholder="Jeff@Amazon.com"
+                                            title="enter your email." value="<?php echo $numContacto ?>"/>
+                                        <div id="feed-email" class="form-control-feedback">
+                                        </div>
+                                        <label for="ctlNumContactoExtra">
+                                            <h4 class="text-secondary">Número de contacto #2</h4>
+                                        </label>
+                                        <input id="ctlNumContactoExtra" type="text" class="form-control" name="numContacto" placeholder="(+569) 8233-2224"
+                                            title="enter your email." value="<?php echo $numContactoExtra ?>"/>
+                                        <div id="feed-email" class="form-control-feedback">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <label for="email">
+                                            <h4 class="text-secondary">Descripción</h4>
+                                        </label>
+                                        <textarea rows="4" cols="50" id="ctlDescripcion" name="descripcion" class="form-control">
+                                        <?php echo $descripcion ?>
+                                        </textarea>
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group">
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12 pt-2">
+                                        <button id="btn-pwSender"class="btn btn-info">
+                                            Cambiar contraseña
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <div class="col-xs-10">
+                            <br>
+                            <button id="btn-profileSender" class="btn btn-lg color-primario" type="submit"><i class="fas fa-save"></i>
+                                Guardar</button>
+                            <button class="btn btn-lg" type="reset"><i class="fas fa-broom"></i>
+                                Limpiar</button>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                </div>
+
+                <!--/tab-pane-->
+            </div>
+            <!--/tab-content-->
+
         </div>
-          <!----------------------->
-    
-        
-        
-        <br>
-        <button id="btn-profile" class="btn btn-primary col-xs-4 " type="submit" style="width : 20rem"  >Guardar</button>
-        <button class="btn btn-danger col-xs-4" type="submit" style="width :20rem"  >Cancelar</button>
-  </form>
-</div>
-
-<div class="col-xs-1"></div>
-
-</div>
-  
-
-    <!-- TERMINA CODIGO DEL PERFIL DEL CLIENTE -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/vendor/toastr.min.js"></script>
-    <script src="/i/usr/controles/control-perfil-usr.js" type="module"></script>
+        <!--/col-9-->
+    </div>
+    <!--/row-->
+    <?php 
+    include '/templates/import-js.html'; 
+    ?>
+    <!--===========================================================================-->
+    <script src="/i/adm/control-perfil-adm.js" type="module"></script>
+    <!--===========================================================================-->
     <script>
       $("#profile").click(function(e){
           e.preventDefault();
@@ -284,12 +291,6 @@ if($_SESSION['estado']=="alumno"){
           });
       });
   </script>
-  <?php 
-    include '/templates/import-js.php'; 
-    ?>
-    <!--===========================================================================-->
-    <script src="/i/adm/control-perfil-adm.js" type="module"></script>
-    <!--===========================================================================-->
     <?php
         if (isset($_GET['error'])) {
     ?>
@@ -307,9 +308,11 @@ if($_SESSION['estado']=="alumno"){
     <?php        
         }
     ?>
-  </body>
+</body>
 
 </html>
+
+  
 <?php 
 }else{
 	header("Location: ../../error-inesperado.html");
