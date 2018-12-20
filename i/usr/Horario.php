@@ -1,3 +1,13 @@
+<?php
+session_start();
+if($_SESSION['estado']=="alumno"){ 
+    $id = $_SESSION['id'];
+    $email = $_SESSION['email'];
+    $nombre = $_SESSION['nombre'];
+    $apellidos = $_SESSION['apellidos'];
+    $_SESSION['action'] =  "actualizaDatos";
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,9 +69,7 @@
             <a class="nav-link" href="/i/usr/home.html">Servicios</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="/i/usr/Historial.html">Historial</a>
-          </li>
+        
 
           <li class="nav-item">
             <a class="nav-link" href="/i/usr/Certificados.html"
@@ -113,10 +121,61 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row"></th>
+              <th s cope="row">todo el dia</th>
               <td></td>
               
             </tr>
+            <tr>
+              <th s cope="row">8:00 am</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row"> 9:45 am</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">11:15 am</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">14:00 pm</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">15:45 pm</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">17:00 pm</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">18:45 pm</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">20:30 pm</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">22:15 pm</th>
+              <td></td>
+              
+            </tr>
+            <tr>
+              <th s cope="row">23:pm</th>
+              <td></td>
+              
+            </tr>
+
             
           </tbody>
         </table>
@@ -132,3 +191,8 @@
     <script src="/js/controles/control-perfil-adm.js" type="module"></script>
   </body>
 </html>
+<?php 
+}else{
+	header("Location: ../../error-inesperado.html");
+} 
+?>
