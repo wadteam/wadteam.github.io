@@ -21,7 +21,10 @@ switch ($_SESSION['estado']){
     case "Relator":
     header("Location: /i/fnc/home.php");  
         break;
-    case "Inactivo":
+    case "Empresa":
+    header("Location: error-ingreso.html");  
+        break;
+    default:
     header("Location: error-ingreso.html");  
         break;
 }

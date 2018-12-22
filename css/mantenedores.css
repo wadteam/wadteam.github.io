@@ -1,10 +1,56 @@
-.manten-alumno .form-control.gup{
-    border-color:#ea5252;
+.manten-alumno .form-control.gup {
+    border-color: #ea5252;
 }
+
 label {
     color: gray;
 }
-h1{
-    text-align:center;
-    color:#ea5252;
+
+h1 {
+    text-align: center;
+    color: #ea5252;
+}
+
+#mostrar {
+    width: 100%;
+}
+
+.bord-y {
+    border-color: #ea5252;
+}
+
+.div_encontrado
+/*estilos para el div que muestra cada usuario encontrado*/
+
+    {
+    padding: 2px;
+    padding-left: 10px;
+    font-size: 16px;
+    height: 65px;
+    color: gray;
+    background-color: white;
+    border-left: 1px solid #ea5252;
+    border-right: 1px solid #ea5252;
+}
+
+.div_encontrado:last-child {
+    border-bottom: 1px solid #ea5252;
+}
+
+.div_encontrado:hover {
+    /*estilos para el div que muestra cada usuario encontrado. cuando el cursor se pocisiona sobre el area*/
+    background-color: rgb(238, 238, 238);
+}
+
+.div_detalle {
+    /*estilo para el div que muestra el perfil*/
+    color: #ea5252;
+    font-size: 16;
+}
+
+.div_detalle:hover
+/*estilo para el div que muestra el perfil. cuando el cursor se pocisiona sobre el area */
+
+    {
+    color: hsl(0, 61%, 53%);
 }

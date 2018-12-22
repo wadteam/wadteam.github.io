@@ -9,7 +9,7 @@ if($_SESSION['estado']=="Alumno"){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <?php include "/templates/import-css.html" ?>
+    <?php include "./templates/import-css.html" ?>
     <!--   -->
     <title>Perfil del usuario - YCourses</title>
     <!--   -->
@@ -17,7 +17,7 @@ if($_SESSION['estado']=="Alumno"){
 
   <body>
     <?php 
-    include "/templates/navbar.php" 
+    include "./templates/navbar.php" 
     ?>
     <!-- -TERMINO DE NAV -->
     <!-- COMIENZA CODIGO DEL CUERPO DEL PERFIL CLIENTE -->
@@ -91,7 +91,7 @@ if($_SESSION['estado']=="Alumno"){
     
 
     <?php 
-    include '/templates/import-js.html'; 
+    include './templates/import-js.html'; 
     ?>
     <!--===========================================================================-->
     

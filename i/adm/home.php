@@ -12,17 +12,17 @@ if(isset($_SESSION['email']) && $_SESSION['estado']=="Admin"){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php 
     //Incluyendo imports de CSS
-    include '/templates/import-css.php'; 
+    include './templates/import-css.php'; 
     ?>
     <title>Home de administrador - YCourses</title>
 </head>
 
 <body>
     <!--IMPORTANDO NAVBAR-->
-    <?php include "/templates/navbar.php" ?>
+    <?php include "./templates/navbar.php" ?>
     
     <!--IMPORTANDO SIDEBAR-WRAPPER -->
-    <?php include "/templates/sidebar.php" ?>
+    <?php include "./templates/sidebar.php" ?>
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -49,7 +49,7 @@ if(isset($_SESSION['email']) && $_SESSION['estado']=="Admin"){
     </div>
     <?php
     //Incliendo Imports JS  
-    include '/templates/import-js.php'; 
+    include './templates/import-js.php'; 
     ?>
     <script>
 

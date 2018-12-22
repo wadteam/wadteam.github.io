@@ -16,13 +16,21 @@ const feedPass = document.getElementById("feed-password");
 sender.onclick = function (e) {
     e.preventDefault();
     //capturando valores desde los controles
+    EvaluarPermiso();
+}
+ctlPass.onkeypress = function(e){
+    if (e.keyCode == 13) {
+        EvaluarPermiso();
+    }
+}
+
+
+function EvaluarPermiso(){
     var email = ctlEmail.value;
     var password = ctlPass.value;
-
     //validaciones disponibles en el documento validadores.js
-
     if (validador.ValidarEmail(ctlEmail, feedEmail, email) &&
         validador.ValidarPassword(ctlPass, feedPass, password)) {
-            formulario.submit();
-    }
+        formulario.submit();
+        }
 }
